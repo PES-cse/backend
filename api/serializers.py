@@ -19,7 +19,7 @@ class CertificationSerializer(serializers.ModelSerializer):
 
 class ResearchSerializer(serializers.ModelSerializer):
     usernames = serializers.PrimaryKeyRelatedField(
-        queryset=User.objects.all(), many=True)
+        read_only=True, many=True)
 
     class Meta:
         model = Research

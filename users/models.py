@@ -73,3 +73,6 @@ class Research(models.Model):
     place = models.CharField(max_length=50)
     users = models.ManyToManyField(
         User, verbose_name='Participants')
+
+    def __str__(self) -> str:
+        return self.title
